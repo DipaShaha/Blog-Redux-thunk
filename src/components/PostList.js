@@ -1,11 +1,19 @@
 import React from 'react';
-class PostList extends Raect.Component{
+import {connect} from 'react-redux';
+import {fetchPosts} from '../actions'; 
+
+class PostList extends React.Component{
+	componentDidMount(){
+		this.props.fetchPosts();
+	}
 	render(){
 		return(
 		<div className="ui container">
 		PostList
 		</div>
-		);
+		)
 	}
 }
-export default PostList;
+export default connect(
+	null,{fetchPosts}
+	)(PostList);

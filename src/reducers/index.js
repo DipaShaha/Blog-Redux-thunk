@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux';
-demoReducer(){
 
-}
+// demoReducer(){
+  
+// }
 
 export default combineReducers({
 	replaceMe:()=>10
